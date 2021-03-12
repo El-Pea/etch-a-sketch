@@ -1,10 +1,13 @@
 function makeGrid(number){
+    number = 16; // this is just for testing
     const gridTarget = document.getElementById('grid-target');
-    number = 16;
-    // this is just for testing, users will put a number in here betwee 1-64
-    for (let i; i <= number; i++){
-        
+    const fragment = document.createDocumentFragment();
+    for (let i = 0; i < number; i++){
+        const gridlet = document.createElement('div');
+        gridlet.classList.add('gridlet');
+        fragment.appendChild(gridlet);
     }
+    gridTarget.appendChild(fragment);
 }
 
 makeGrid();
