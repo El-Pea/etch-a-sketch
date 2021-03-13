@@ -26,14 +26,37 @@ html {
   * {
       text-align: center;
   }
+
   #grid-target{
-      display: grid;
       margin: 25px auto;
-      height: 540px;
-      width: 540px;
+      height: 564px;
+      width: 564px;
       border: 2px solid black;
   }
-
   .gridlet{
-      border: 1px solid rgb(121, 121, 121);
+    border: 1px solid rgb(121, 121, 121);
+    float: right;
+    box-sizing: border-box;
   }
+  
+  /*
+  .gridlet:hover{
+    background-color: black;
+  }
+  */
+
+  /*
+  #grid-target > div {
+    background: black;
+    padding: .16rem;
+  }
+
+  
+  #grid-target > div::before {
+    content: "";
+    padding-bottom: 100%;
+    display: block;
+  }
+  */
+
+  
