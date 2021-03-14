@@ -14,11 +14,17 @@ function makeGrid(number){
     gridTarget.appendChild(fragment);
 }
 
+
 function paintItBlack(){
-    const gridlets = document.querySelectorAll('gridlet');
-    
+    const gridlets = document.querySelectorAll('.gridlet');
+    gridlets.forEach((gridlet)=>{
+        gridlet.addEventListener('mouseover', ()=>{
+            gridlet.style.backgroundColor = 'black';
+        });
     });
-    
 }
 
+
 makeGrid();
+paintItBlack();
+
