@@ -14,7 +14,6 @@ function makeGrid(number){
     gridTarget.appendChild(fragment);
 }
 
-
 function paintItBlack(){
     const gridlets = document.querySelectorAll('.gridlet');
     gridlets.forEach((gridlet)=>{
@@ -24,7 +23,25 @@ function paintItBlack(){
     });
 }
 
+function randomColors() {
+    var letters = '0123456789ABCDEF'.split('');
+    var color = '#';
+    for (var i = 0; i < 6; i++ ) {
+        color += letters[Math.floor(Math.random() * 16)];
+    }
+    return color;
+}
+
+function paintItRainbow(){
+    const gridlets = document.querySelectorAll('.gridlet');
+    gridlets.forEach((gridlet)=>{
+        gridlet.addEventListener('mouseover', ()=>{
+            gridlet.style.backgroundColor = randomColors();
+        });
+    });
+}
 
 makeGrid();
-paintItBlack();
+//paintItBlack();
+//paintItRainbow();
 
