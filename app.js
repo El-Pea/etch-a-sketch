@@ -1,4 +1,5 @@
 function makeGrid(number){
+    if (number === undefined){number = 2;}
     const gridlets = number * number;
     const gridTarget = document.getElementById('grid-target');
     const fragment = document.createDocumentFragment();
@@ -8,18 +9,24 @@ function makeGrid(number){
         gridlet.style.width = `${560/number}px`;
         gridlet.classList.add('gridlet');
         fragment.appendChild(gridlet);
-
     }
     gridTarget.appendChild(fragment);
 }
 
-function paintIt(){
+function choosePaint(){
+   const paintMode = document.querySelectorAll('.paint-mode');
+   paintMode.forEach((mode)=>{
+       mode.addEventListener('click',()=>paintIt(mode.id));
+   });
+}
+
+function paintIt(choice){
     const gridlets = document.querySelectorAll('.gridlet');
     gridlets.forEach((gridlet)=>{
         gridlet.addEventListener('mouseover', ()=>{
-            // gridlet.style.backgroundColor = 'black';
-            gridlet.style.backgroundColor = moreGrey();
-            // gridlet.style.backgroundColor = randomColors();
+            if (choice === 'black'){gridlet.style.backgroundColor = 'black'};
+            if (choice === 'grey'){gridlet.style.backgroundColor = moreGrey()};
+            if (choice === 'random'){gridlet.style.backgroundColor = randomColors()};
         });
     });
 }
@@ -44,9 +51,9 @@ function moreGrey(){
 
 function resize(){
     const resize = document.getElementById('resize-button');
+    const gridlet = document.querySelectorAll('.gridlet');
     resize.addEventListener('click', ()=>{
         location.reload();
-        
     });
 };
 
@@ -62,5 +69,5 @@ function howMany(){
 
 makeGrid(howMany());
 resize();
-paintIt();
-
+//paintIt();
+choosePaint();
