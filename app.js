@@ -1,5 +1,4 @@
 function makeGrid(number){
-    //number = 16; //testing
     const gridlets = number * number;
     const gridTarget = document.getElementById('grid-target');
     const fragment = document.createDocumentFragment();
@@ -14,11 +13,13 @@ function makeGrid(number){
     gridTarget.appendChild(fragment);
 }
 
-function paintItBlack(){
+function paintIt(){
     const gridlets = document.querySelectorAll('.gridlet');
     gridlets.forEach((gridlet)=>{
         gridlet.addEventListener('mouseover', ()=>{
-            gridlet.style.backgroundColor = 'black';
+            // gridlet.style.backgroundColor = 'black';
+            gridlet.style.backgroundColor = moreGrey();
+            // gridlet.style.backgroundColor = randomColors();
         });
     });
 }
@@ -32,16 +33,6 @@ function randomColors() {
     return color;
 }
 
-function paintItRainbow(){
-    const gridlets = document.querySelectorAll('.gridlet');
-    gridlets.forEach((gridlet)=>{
-        gridlet.addEventListener('mouseover', ()=>{
-           //  gridlet.style.backgroundColor = randomColors();
-             gridlet.style.backgroundColor = moreGrey();
-        });
-    });
-}
-
 let lightness = 100;
 
 function moreGrey(){
@@ -51,11 +42,11 @@ function moreGrey(){
     return color;
 };
 
-function doItAgain(){
-    const reset = document.getElementById('reset-button');
-    reset.addEventListener('click', ()=>{
+function resize(){
+    const resize = document.getElementById('resize-button');
+    resize.addEventListener('click', ()=>{
         location.reload();
-        //howMany();
+        
     });
 };
 
@@ -70,7 +61,6 @@ function howMany(){
 }
 
 makeGrid(howMany());
-doItAgain();
-//paintItBlack();
-paintItRainbow();
-//paintItGrey();
+resize();
+paintIt();
+
