@@ -7,4 +7,5 @@ Takeaways:
 <br/>
 -reflow: when a browser must process and draw part or all of a webpage again, such as after an update on an interactive site
 <br/>
-MIGHT GO THIS DIRECTION FOR MAKING GRID: https://www.youtube.com/watch?v=8bhKjoowr4c
+
+
