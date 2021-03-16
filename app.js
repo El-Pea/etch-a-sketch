@@ -1,5 +1,5 @@
 function makeGrid(number){
-    if (number === undefined){number = 2;}
+    if (number === undefined){number = 16;}
     const gridlets = number * number;
     const gridTarget = document.getElementById('grid-target');
     const fragment = document.createDocumentFragment();
@@ -24,6 +24,7 @@ function paintIt(choice){
     const gridlets = document.querySelectorAll('.gridlet');
     gridlets.forEach((gridlet)=>{
         gridlet.addEventListener('mouseover', ()=>{
+            if (choice === undefined){gridlet.style.backgroundColor = moreGrey()}
             if (choice === 'black'){gridlet.style.backgroundColor = 'black'};
             if (choice === 'grey'){gridlet.style.backgroundColor = moreGrey()};
             if (choice === 'random'){gridlet.style.backgroundColor = randomColors()};
@@ -51,9 +52,11 @@ function moreGrey(){
 
 function resize(){
     const resize = document.getElementById('resize-button');
-    const gridlet = document.querySelectorAll('.gridlet');
     resize.addEventListener('click', ()=>{
-        location.reload();
+        const gridlet = document.querySelectorAll('.gridlet');
+        gridlet.forEach((e)=>e.remove());
+        makeGrid(howMany());
+        paintIt();
     });
 };
 
@@ -67,7 +70,7 @@ function howMany(){
     }
 }
 
-makeGrid(howMany());
+makeGrid();
 resize();
-//paintIt();
+paintIt();
 choosePaint();
