@@ -27,17 +27,26 @@ html {
       text-align: center;
   }
 
+  body{
+    background-color: #F8BBD0;
+  }
+
+  h1{
+    margin-top: 15px;
+  }
+
   #grid-target{
       margin: 25px auto;
       height: 564px;
       width: 564px;
-      border: 2px solid black;
+      border: 2px solid #448AFF;
   }
   .gridlet{
       /*border: 1px solid rgb(121, 121, 121);*/
-      border-left: 1px solid rgb(121, 121, 121);
-      border-bottom: 1px solid rgb(121, 121, 121);;
+      border-left: 1px solid #75a8ff;
+      border-bottom: 1px solid #75a8ff;
       float: right;
+      background-color: white;
   }
   #resize-button{
       margin: 25px 0 auto;
@@ -47,4 +56,20 @@ html {
       margin-bottom: 25px;
   }
 
-  
+  #resize-button, .paint-mode{
+    color: #FFFFFF;
+    background-color: #C2185B;
+    border: 2px solid #E91E63;
+    border-radius: 5px;
+    font-size: 15px;
+  }
+
+  h1, #button-header{
+    color: #FFF;
+    font-family: 'Lobster', cursive;
+    text-shadow: 2px 2px #C2185B;
+  }
+
+  #resize-button:hover, .paint-mode:hover{
+    color:hsl(218, 100%, 93%);
+  }
