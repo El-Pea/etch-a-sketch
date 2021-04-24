@@ -33,6 +33,7 @@ html {
 
   h1{
     margin-top: 15px;
+    font-size: 42px;
   }
 
   #grid-target{
@@ -48,12 +49,14 @@ html {
       float: right;
       background-color: white;
   }
+
   #resize-button{
       margin: 25px 0 auto;
-    
+
   }
   #button-header{
       margin-bottom: 25px;
+      font-size: 30px;
   }
 
   #resize-button, .paint-mode{
@@ -62,6 +65,7 @@ html {
     border: 2px solid #E91E63;
     border-radius: 5px;
     font-size: 15px;
+    font-weight: bold;
   }
 
   h1, #button-header{
