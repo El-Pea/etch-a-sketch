@@ -77,3 +77,5 @@ html {
   #resize-button:hover, .paint-mode:hover{
     color:hsl(218, 100%, 93%);
   }
+
+footer{background-color: hsl(279, 81%, 85%);}

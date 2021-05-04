@@ -24,9 +24,9 @@ function paintIt(choice){
     const gridlets = document.querySelectorAll('.gridlet');
     gridlets.forEach((gridlet)=>{
         gridlet.addEventListener('mouseover', ()=>{
-            if (choice === undefined){gridlet.style.backgroundColor = moreGrey()}
+            if (choice === undefined){gridlet.style.backgroundColor = morePurple()}
             if (choice === 'black'){gridlet.style.backgroundColor = 'black'};
-            if (choice === 'grey'){gridlet.style.backgroundColor = moreGrey()};
+            if (choice === 'purple'){gridlet.style.backgroundColor = moreGrey()};
             if (choice === 'random'){gridlet.style.backgroundColor = randomColors()};
         });
     });
@@ -43,9 +43,18 @@ function randomColors() {
 
 let lightness = 100;
 
+/*
 function moreGrey(){
     if (lightness === 0){lightness = 100;};
     let color = `hsl(0,0%,${lightness}%`;
+    lightness -= 10; 
+    return color;
+};
+*/
+
+function morePurple(){
+    if (lightness === 30){lightness = 100;};
+    let color = `hsl(279,81%,${lightness}%`;
     lightness -= 10; 
     return color;
 };
