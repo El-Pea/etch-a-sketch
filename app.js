@@ -26,7 +26,7 @@ function paintIt(choice){
         gridlet.addEventListener('mouseover', ()=>{
             if (choice === undefined){gridlet.style.backgroundColor = morePurple()}
             if (choice === 'black'){gridlet.style.backgroundColor = 'black'};
-            if (choice === 'purple'){gridlet.style.backgroundColor = moreGrey()};
+            if (choice === 'purple'){gridlet.style.backgroundColor = morePurple()};
             if (choice === 'random'){gridlet.style.backgroundColor = randomColors()};
         });
     });
