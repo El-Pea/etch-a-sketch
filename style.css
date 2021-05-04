@@ -66,6 +66,7 @@ html {
     border-radius: 5px;
     font-size: 15px;
     font-weight: bold;
+    font-family: 'Montserrat', sans-serif;
   }
 
   h1, #button-header{
@@ -75,7 +76,7 @@ html {
   }
 
   #resize-button:hover, .paint-mode:hover{
-    color:hsl(218, 100%, 93%);
+    color:hsl(64, 100%, 83%);
   }
 
 footer{background-color: hsl(279, 81%, 85%);}
