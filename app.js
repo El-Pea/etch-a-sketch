@@ -70,9 +70,9 @@ function resize(){
 };
 
 function howMany(){
-    const input = parseInt(prompt('Enter a number between 1-100', 16), 10);
-    if (input <= 0 || input > 100 || isNaN(input)){
-        alert('Please enter a number between 1-100');
+    const input = parseInt(prompt('Enter a number between 1-42', 16), 10);
+    if (input <= 0 || input > 42 || isNaN(input)){
+        alert('Please enter a number between 1-42');
         return howMany();
     } else {
         return input;
